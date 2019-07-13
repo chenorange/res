@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>李琛的简历</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/resume.css">
+    <script src="//at.alicdn.com/t/font_1037151_bg0mk0t3a9d.js"></script>
+    <script>
+        window.onload = (()=>{
+            // setTimeout(() => {
+                document.querySelector("div.loading-wrapper").classList.add("end");
+            // }, 1000); 
+        })
+    </script>
+</head>
+<body> 
+    <div class="loading-wrapper" id="site-loading">
+        <div class="loading"></div>
+    </div>
+    <div class="topNavBar clearfix" id="topNavBar">
+        <a href="#" class="logo">
+            <span class="rs">RS</span><span class="card">card</span>
+        </a>
+        <nav class="nav">
+            <ul class="clearfix">
+                <li class=""><a href="#userCard">关于</a></li>
+                <li class="">
+                    <a href="#skills">技能</a>
+                    <ul class="subMenu">
+                        <li>React</li>
+                        <li>Vue</li>
+                        <li>jQuery</li>
+                        <li>Angular</li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#portfolio">作品集</a>
+                    <ul class="subMenu">
+                        <li >在线简历</li>
+                        <li >网址导航</li>
+                        <li >Canvas画板</li>
+                        <li >网易云音乐</li>
+                        <li ><a class="linkOutside" href="https://chenorange.github.io/" target="_blank" >我的博客</a></li>
+                    </ul>
+                </li>
+                <li class=""><a href="javascript:void(0)">联系方式</a></li>
+                <li class=""><a href="javascript:void(0)">其它</a></li>
+            </ul>
+        </nav>  
+    </div>
+
+    <div class="banner" id="banner">
+        <div class="mask"></div>
+    </div>
+
+    <main>
+        <div specialNode class="userCard" id="userCard">
+            <div class="pictureAndText clearfix">
+                <div class="picture">
+                    
+                </div>
+                <div class="text">
+                    <span class="hello">
+                        Hello
+                        <span class="triangle"></span>
+                    </span>
+                    <h1 class="name">李琛</h1>
+                    <p class="title">前端工程师</p>
+                    <hr>
+                    <dl>
+                        <dt>年龄</dt>
+                        <dd>25</dd>
+                        <dt>地址</dt>
+                        <dd>xxx</dd>
+                        <dt>邮箱</dt>
+                        <dd>lichen112257@163.com</dd>
+                        <dt>电话</dt>
+                        <dd>110</dd>
+                        <dt>爱好</dt>
+                        <dd>编程</dd>
+                        <dt>居住地</dt>
+                        <dd>杭州</dd>
+                    </dl>
+                </div>
+            </div>
+            <footer>
+                <a href="#" title="QQ">
+                    <svg class="icon" aria-hidden="true" >
+                            <use xlink:href="#icon-QQ"></use>
+                    </svg>
+                </a>
+                <a href="#" title="微信">
+                    <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-wechat"></use>
+                    </svg>
+                </a>
+                <a href="#" title="微博">
+                    <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                </a>
+                <a href="https://github.com/chenorange" target="_blank" title="GitHub">
+                    <svg class="icon" aria-hidden="true" style="vertical-align:-0.35em;">
+                            <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
+                <a href="#" title="简书">
+                    <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-weibiaoti-"></use>
+                    </svg>
+                </a>
+                <a href="#" title="知乎">
+                    <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                </a>
+            </footer>
+        </div>
+    </main>
+    
+    <section  class="resumeAndIntroduction wrapper">
+        <a href="" download>下载简历</a>
+        <p class="selfIntroduction">
+            你好，我很喜欢编程式的工作，所以希望通过学习前端，迈入程序员的行列。计划在未来成为主攻前端，涉猎后端及其他有趣领域的程序员。
+        </p>
+    </section>
+    
+    <section specialNode class="skills wrapper clearfix" id="skills">
+        <h2>技能</h2>
+        <ol class="clearfix">
+            <li>
+                HTML 5 &amp; CSS 3
+                <div class="progress-wrapper">
+                    <div class="progress" style="width:80%"></div>
+                </div>
+            </li>
+            <li>
+                JavaScript
+                <div class="progress-wrapper">
+                    <div class="progress" style="width:70%"></div>
+                </div>
+            </li>
+            <li>
+                jQuery
+                <div class="progress-wrapper">
+                    <div class="progress" style="width:30%"></div>
+                </div>
+            </li>
+            <li>
+                Vue
+                <div class="progress-wrapper">
+                    <div class="progress" style="width:80%"></div>
+                </div>
+            </li>
+            <li>
+                React
+                <div class="progress-wrapper">
+                    <div class="progress" style="width:80%"></div>
+                </div>
+            </li>
+            <li>
+                HTTP
+                <div class="progress-wrapper">
+                    <div class="progress" style="width:60%"></div>
+                </div>
+            </li>
+        </ol>   
+    </section>
+    
+    <section specialNode class="portfolio wrapper" id="portfolio">
+        <h2>作品集</h2>
+        <nav>
+            <ol class="clearfix">
+                <li id="all" onclick="barChange(this)">所有</li>
+                <li id="original" onclick="barChange(this)">原生</li>
+                <li id="originalJsAndCSS" onclick="barChange(this)">原生JS&amp;CSS</li>
+            </ol>
+            <div class="progress-wrapper">
+                <div class="progress"></div>
+            </div>
+        </nav>
+        <div class="works">
+            <img src="img/big.jpg" alt="" class="work big">
+            <img src="img/small1.jpg" alt="" class="work small1">
+            <img src="img/small2.jpg" alt="" class="work small2">
+        </div>
+    </section>
+    <div class="blank"></div>
+    <!--Commnet-->
+    <section class="comment wrapper">
+        <h2>Comment</h2>
+        <form class="clearfix">
+            <textarea name="content"></textarea>
+            <input type="submit">
+        </form>
+        <ol class="commentDetail">
+        </ol>
+    </section>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js"></script>
+    <script src="js/comment.js"></script>
+</body>
+</html>

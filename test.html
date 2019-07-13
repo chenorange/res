@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div.flex{
+            display: flex;
+            height: 80vh;
+            background-color: rgb(238, 238, 238);
+            justify-content: center;
+            align-items:center;
+            /* flex-wrap: wrap-reverse;
+            flex-direction: column; */
+            flex-flow: column wrap-reverse;
+        }
+
+        body{
+            height: 100vh;
+            background-size: cover;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var request = new XMLHttpRequest();
+        var method = "GET";
+        var url = "https://pixabay.com/api/?";
+        var params = {
+        key: "5460618-7deee73f9538bd8e6673d0b47",
+        q: "scenery",
+        image_type: "photo",
+        per_page: 200,
+        };
+        for (const key in params) {
+            if (params.hasOwnProperty(key)) {
+                const element = params[key];
+                url += (key + "=" + params[key] + "&");
+            }
+        }
+        url = url.slice(0, url.length - 1);
+        request.open(method, url);
+        request.send(null);
+        request.onreadystatechange = function(){
+            if (request.readyState === 4) {
+                let response = JSON.parse(request.responseText);
+                let randomNum = Math.random() * 200;
+                randomNum = randomNum.toFixed();
+                console.log(response);
+                document.body.style.backgroundImage = "url(" + response.hits[randomNum].largeImageURL + ")";
+                document.body.style.backgroundRepeat = "no-repeat";
+            };
+        }   
+     
+    </script>
+</body>
+</html>
